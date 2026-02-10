@@ -30,7 +30,7 @@
 </head>
 
 <body class="bg-gradient-to-b from-rose-900 via-pink-900 to-gray-900 min-h-screen text-white antialiased">
-<audio id="bgMusic" src="music/her.mp3" autoplay loop></audio>
+<audio id="bgMusic" src="music/her.mp3" loop preload="auto"></audio>
 
 <!-- Falling pictures layer -->
 <div id="picture-layer" class="pointer-events-none fixed inset-0 overflow-hidden z-0">
@@ -180,19 +180,22 @@ Renz Kayle Ando<br>
 
 <script>
 const bgMusic = document.getElementById("bgMusic");
-
-// Try playing immediately
 bgMusic.volume = 0.7;
-bgMusic.play().catch(() => {
-  // Autoplay blocked — wait for user interaction
-  const resumeMusic = () => {
-    bgMusic.play();
-    document.removeEventListener("click", resumeMusic);
-    document.removeEventListener("touchstart", resumeMusic);
-  };
-  document.addEventListener("click", resumeMusic);
-  document.addEventListener("touchstart", resumeMusic);
-});
+
+let musicStarted = false;
+
+function startMusic() {
+  if (musicStarted) return;
+  musicStarted = true;
+  bgMusic.play().catch(() => {});
+}
+
+// Try autoplay (PC browsers)
+startMusic();
+
+// Mobile fallback — first user interaction
+document.addEventListener("click", startMusic, { once: true });
+document.addEventListener("touchstart", startMusic, { once: true });
 
 /* Falling pictures using static list 1.jpg → 66.jpg */
 const layer = document.getElementById("picture-layer");
@@ -276,3 +279,4 @@ document.getElementById("downloadBtn").onclick = () => {
 
 </body>
 </html>
+
