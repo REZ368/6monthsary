@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Monthsary — Mary Ann Mercado</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes floatDown {
+      0% { transform: translateY(-30%) scale(1); opacity: 0; }
+      10% { opacity: 1; }
+      50% { transform: translateY(40vh) scale(1.05); opacity: 1; }
+      100% { transform: translateY(100vh) scale(1); opacity: 0; }
+    }
+    @keyframes heartBeat {
+      0%, 28%, 70%, 100% { transform: scale(1); }
+      14% { transform: scale(1.07); }
+      42% { transform: scale(1.06); }
+    }
+    .float-down { animation: floatDown linear infinite; }
+    .heart-beat { animation: heartBeat 2.6s infinite; }
+    .modal-enter { transform: translateY(20%) scale(.95); opacity: 0; }
+    .modal-enter-active {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      transition: all .4s cubic-bezier(.2,.9,.3,1);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-rose-900 via-pink-900 to-gray-900 min-h-screen text-white antialiased">
+
+<!-- Falling pictures layer -->
+<div id="picture-layer" class="pointer-events-none fixed inset-0 overflow-hidden z-0">
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"></div>
+</div>
+
+<main class="relative z-10 flex items-center justify-center min-h-screen p-6 text-center sm:text-left">
+  <div class="max-w-3xl w-full">
+    <div class="rounded-3xl border border-rose-500/30 bg-gradient-to-tr from-black/30 to-black/10 p-8 shadow-xl backdrop-blur-sm">
+
+      <header class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-2">
+        <div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold">Happy 6-Monthsary</h1>
+          <p class="text-rose-200/90 text-sm">For <span class="font-semibold">Mary Ann Mercado</span></p>
+        </div>
+        <div>
+          <p class="text-sm text-rose-300">Date</p>
+          <p class="font-medium">February 10, 2026</p>
+        </div>
+      </header>
+
+      <p class="text-rose-100/90 mb-6">
+        To my soon-to-be wife, Mary.  
+        Six months of love, laughter, sadness, longing, silence, rare contact, tears, and everything in between.  
+        Behind this button is every feeling I carry and every adventure of our long-distance love.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <button id="openBtn"
+          class="heart-beat inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-pink-500 to-rose-600 font-semibold shadow-lg">
+          ❤️ Open
+        </button>
+
+        <button id="replyBtn"
+          class="px-6 py-3 rounded-xl bg-white/10 border border-rose-400/40 hover:bg-white/20">
+          ✍️ Reply
+        </button>
+
+        <button id="downloadBtn" class="sm:ml-auto text-xs text-rose-200/80 hover:text-rose-100">
+          Download Letter
+        </button>
+      </div>
+
+      <footer class="mt-6 text-xs text-rose-300/60">
+        Address: Sudtonggan Basak Lapu-Lapu, Cebu
+      </footer>
+
+    </div>
+  </div>
+</main>
+
+<!-- LETTER MODAL -->
+<div id="overlay" class="fixed inset-0 z-20 hidden items-center justify-center px-4">
+  <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+
+  <article id="letter"
+    class="relative max-w-2xl w-full rounded-2xl p-8 bg-gradient-to-b from-rose-900/80 via-black/60 to-black/70 border border-rose-600/30 text-rose-50 shadow-xl modal-enter text-center sm:text-left">
+
+    <div class="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-2">
+      <div>
+        <h2 class="text-2xl font-bold">Dear Mary,</h2>
+        <p class="text-sm text-rose-200/80">February 10, 2026 — Cebu</p>
+      </div>
+      <button id="closeBtn" class="p-2 text-rose-200 hover:text-white">✕</button>
+    </div>
+
+    <div id="letter-body" class="mt-6 max-h-[70vh] overflow-y-auto pr-3 space-y-4 text-rose-100/90">
+     12:00 AM – 11:59 PM
+
+Dear Mary,
+
+Happy 6-monthsary, baby.
+
+It has really been a long journey since we started. From the first month of October, you gave me so much attention and love, and I truly appreciated that. That was when I started falling in love with you. From that first month, you were like the sun in a dark night. I was not very affectionate before, but my love for you was real. I wanted to meet you so badly. <br><br>
+
+You were the girl I had a crush on because of your beauty, your smile, your eyes, your personality, and the way you share your days, your friends, and your life. You are pleasing, lovely, and sweet. I may not have much to give, but I can give you my loyalty, love, honor, care, and trust.<br><br>
+ 
+I didn’t realize how we were slowly gaining more and more memories together. I am very thankful that you met me, and I also kind of regret that you saw my bad side. But instead of leaving, you stayed. You stayed even when I was very busy before and ended up ignoring you because of my work. Still, that did not stop you from staying with me. I was blind not to notice that before.<br><br>
+
+I am thankful because even when you were so obsessed with me before, I failed to appreciate it. I am sorry for being too busy with work. I was motivated at that time because you were my purpose for working. You were the reason I slowly started becoming myself again. I am not really a good person, but I didn’t realize that you would be the reason I became kinder to people, even when I receive nothing in return.<br><br>
+
+You are the reason I started taking myself seriously, working harder, praying harder, and loving you deeply. Yes, I am a yearner, and that is because you showed me what life and home feel like. You are the home I want to stay in and live in forever. I want to be with you badly, to be close, free, and even freaky together anytime.<br><br>
+
+I’m sorry for my attitude. I am an overthinker, and sometimes I cannot control my mind because I am afraid of my past self. I want to love you, not leave you. I want to care for you, not abandon you. I used to be avoidant, but I changed because I wanted to prove myself to you and give you assurance and commitment.<br><br>
+
+But honestly, I don’t know what to do right now. I am at my lowest point. I don’t have anyone to talk to or share things with. I even ignored my friends because I was focused on finding solutions. What matters most to me right now is saving money and keeping you.<br><br>
+
+But you are busy too, so I slowly started giving you less attention so you could focus more on your life without me. And that is exactly what I am afraid of. I am afraid that you will leave me. I don’t want to feel that pain and cry again. It would really hurt me if you left me or cheated on me.<br><br>
+
+Your friends might be right. Maybe you are not ready for a relationship. Maybe they are right that you are into flirting and not growing old with me. I don’t have the right to tell them they are wrong because they are your friends, and I respect that boundary. I honestly don’t know what to do. Maybe they are right. Maybe you should leave me, even though I am scared of that. I feel powerless.<br><br>
+
+If flirting is all you want from this relationship, then maybe I am not the one for you. I want to grow old with you, make you my wife, and build our dreams together. I am into a long-term relationship because I am getting older, and I chose you. Please wait for me. I am still struggling.<br><br>
+
+But hey, baby… guess what? We reached our 6th monthsary. I hope we continue to be together until the day we finally say the word “Finally.” Finally, we meet. Finally, we date.<br><br>
+
+Thank you for the memories. <br>
+Thank you for loving me.<br>
+Thank you for accepting me.<br>
+Thank you for understanding me.<br>
+Thank you for the care.<br>
+Thank you for the flirts.<br>
+Thank you for the voice calls.<br>
+Thank you for the freakiness.<br>
+Thank you for the motivation.<br>
+Thank you for the games we played.<br>
+See you at the aisle.<br><br>
+
+Thank you, Micah.<br>
+I did love you.<br><br>
+
+Sincerly Yours,<br>
+Renz Kayle Ando<br>
+    </div>
+
+    <div class="mt-6 flex justify-center sm:justify-end gap-3">
+      <button id="closeBtn2" class="px-4 py-2 rounded-lg bg-rose-600">Close</button>
+    </div>
+
+  </article>
+</div>
+
+<!-- REPLY MODAL -->
+<div id="replyOverlay" class="fixed inset-0 z-30 hidden items-center justify-center bg-black/40 backdrop-blur-sm px-4">
+  <form action="https://formspree.io/f/xyzjnbqd" method="POST"
+    class="w-full max-w-xl rounded-2xl bg-black/40 border border-rose-500/30 p-6">
+
+    <h3 class="text-xl font-bold mb-2">Write your reply 💌</h3>
+    <p class="text-sm text-rose-200 mb-3">Maximum 300 words</p>
+
+    <input type="email" name="email" required placeholder="Your email"
+      class="w-full mb-3 p-2 rounded bg-black/40 border border-rose-400/40">
+
+    <textarea id="replyText" name="message" required rows="7"
+      class="w-full p-3 rounded bg-black/40 border border-rose-400/40"
+      placeholder="Write from your heart…"></textarea>
+
+    <div class="text-xs text-rose-300 mt-2">
+      <span id="wordCount">0</span> / 300 words
+    </div>
+
+    <div class="mt-5 flex gap-3">
+      <button type="button" id="closeReply" class="px-4 py-2 bg-white/10 rounded-lg">Cancel</button>
+      <button type="submit" class="ml-auto px-5 py-2 bg-rose-600 rounded-lg font-semibold">Send</button>
+    </div>
+  </form>
+</div>
+
+<script>
+/* Falling pictures using static list 1.jpg → 66.jpg */
+const layer = document.getElementById("picture-layer");
+
+const imageSources = [
+  "picture/1.jpg","picture/2.jpg","picture/3.jpg","picture/4.jpg","picture/5.jpg","picture/6.jpg",
+  "picture/7.jpg","picture/8.jpg","picture/9.jpg","picture/10.jpg","picture/11.jpg","picture/12.jpg",
+  "picture/13.jpg","picture/14.jpg","picture/15.jpg","picture/16.jpg","picture/17.jpg","picture/18.jpg",
+  "picture/19.jpg","picture/20.jpg","picture/21.jpg","picture/22.jpg","picture/23.jpg","picture/24.jpg",
+  "picture/25.jpg","picture/26.jpg","picture/27.jpg","picture/28.jpg","picture/29.jpg","picture/30.jpg",
+  "picture/31.jpg","picture/32.jpg","picture/33.jpg","picture/34.jpg","picture/35.jpg","picture/36.jpg",
+  "picture/37.jpg","picture/38.jpg","picture/39.jpg","picture/40.jpg","picture/41.jpg","picture/42.jpg",
+  "picture/43.jpg","picture/44.jpg","picture/45.jpg","picture/46.jpg","picture/47.jpg","picture/48.jpg",
+  "picture/49.jpg","picture/50.jpg","picture/51.jpg","picture/52.jpg","picture/53.jpg","picture/54.jpg",
+  "picture/55.jpg","picture/56.jpg","picture/57.jpg","picture/58.jpg","picture/59.jpg","picture/60.jpg",
+  "picture/61.jpg","picture/62.jpg","picture/63.jpg","picture/64.jpg","picture/65.jpg","picture/66.jpg"
+];
+
+// spawn 30 images instead of 15
+for (let i = 0; i < 30; i++) {
+  const img = document.createElement("img");
+  img.src = imageSources[Math.floor(Math.random() * imageSources.length)];
+  img.className = "absolute float-down rounded-xl opacity-70";
+
+  // random width between 80px and 200px
+  img.style.width = `${80 + Math.random() * 120}px`;
+
+  // random horizontal start
+  img.style.left = `${Math.random() * 100}%`;
+
+  // start slightly above the screen
+  img.style.top = `-${Math.random() * 200}px`;
+
+  // faster animation: 5s to 12s
+  img.style.animationDuration = `${5 + Math.random() * 7}s`;
+
+  // random animation delay
+  img.style.animationDelay = `${Math.random() * 5}s`;
+
+  layer.appendChild(img);
+}
+
+/* Letter modal */
+const overlay = document.getElementById("overlay");
+const letter = document.getElementById("letter");
+document.getElementById("openBtn").onclick = () => {
+  overlay.classList.remove("hidden");
+  setTimeout(() => letter.classList.add("modal-enter-active"), 10);
+};
+function closeModal() {
+  letter.classList.remove("modal-enter-active");
+  setTimeout(() => overlay.classList.add("hidden"), 300);
+}
+document.getElementById("closeBtn").onclick = closeModal;
+document.getElementById("closeBtn2").onclick = closeModal;
+
+/* Reply modal */
+const replyOverlay = document.getElementById("replyOverlay");
+document.getElementById("replyBtn").onclick = () => replyOverlay.classList.remove("hidden");
+document.getElementById("closeReply").onclick = () => replyOverlay.classList.add("hidden");
+
+/* Word limit */
+const replyText = document.getElementById("replyText");
+const wordCount = document.getElementById("wordCount");
+replyText.addEventListener("input", () => {
+  const words = replyText.value.trim().split(/\s+/).filter(Boolean);
+  if (words.length > 300) replyText.value = words.slice(0, 300).join(" ");
+  wordCount.textContent = words.length;
+});
+
+/* Download */
+document.getElementById("downloadBtn").onclick = () => {
+  const text = document.getElementById("letter-body").innerText;
+  const blob = new Blob([text], { type: "text/plain" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "Love-Letter.txt";
+  a.click();
+};
+</script>
+
+</body>
+</html>
